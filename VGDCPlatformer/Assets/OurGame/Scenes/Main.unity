@@ -157,8 +157,6 @@ MonoBehaviour:
   mCameraViewWidth: -11
   mCameraViewHeight: 0
   mForwardMove: 0
-  mOutOfBoundsDown: 0
-  mSpawnPoint: {fileID: 899656440}
 --- !u!61 &22644050
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -228,8 +226,6 @@ MonoBehaviour:
   mCameraViewWidth: 0
   mCameraViewHeight: 6
   mForwardMove: 0
-  mOutOfBoundsDown: 0
-  mSpawnPoint: {fileID: 899656440}
 --- !u!61 &344145328
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1375,7 +1371,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 5.9708853
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2217,8 +2213,6 @@ MonoBehaviour:
   mCameraViewWidth: 11
   mCameraViewHeight: 0
   mForwardMove: 0
-  mOutOfBoundsDown: 0
-  mSpawnPoint: {fileID: 899656440}
 --- !u!61 &1889983379
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3053,8 +3047,6 @@ MonoBehaviour:
   mCameraViewWidth: 0
   mCameraViewHeight: -6
   mForwardMove: 0
-  mOutOfBoundsDown: -20
-  mSpawnPoint: {fileID: 899656440}
 --- !u!61 &2112962994
 BoxCollider2D:
   m_ObjectHideFlags: 0
