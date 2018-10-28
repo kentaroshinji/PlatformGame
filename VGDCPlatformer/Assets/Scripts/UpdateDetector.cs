@@ -8,7 +8,6 @@ public class UpdateDetector : MonoBehaviour {
     public float mCameraViewHeight;
     public float mForwardMove;
 
-    public Transform mSpawnPoint;
 	// Use this for initialization
 	void Start ()
     {
@@ -22,11 +21,12 @@ public class UpdateDetector : MonoBehaviour {
 		
 	}
 
+    // Called when Player collider collides with detector
     void OnTriggerEnter2D(Collider2D other)
     {
+        // If the player runs into a detector, move the camera and detectors appropriately
         if(other.gameObject.CompareTag("Player"))
         {
-            //mSpawnPoint.position = new Vector3(mSpawnPoint.position.x + mCameraViewWidth, mSpawnPoint.position.y + mCameraViewHeight, mSpawnPoint.position.z);
             if (mCameraViewWidth > 0)
             {
                 StartCoroutine(LeftOrRight());
@@ -50,12 +50,11 @@ public class UpdateDetector : MonoBehaviour {
                 other.gameObject.transform.position = new Vector3(other.gameObject.transform.position.x, other.gameObject.transform.position.y - .3f, other.gameObject.transform.position.z);
                 
             }
-
-            //transform.parent.position = new Vector3(transform.parent.position.x + mCameraViewWidth, transform.parent.position.y + mCameraViewHeight, transform.parent.position.z);
         }
         
     }
 
+    // Slowly moves the camera over 11 units left or right
     IEnumerator LeftOrRight()
     {
         float count = 0;
@@ -71,6 +70,7 @@ public class UpdateDetector : MonoBehaviour {
         }
     }
 
+    // slowly moves the camera up or down 6 units
     IEnumerator UpOrDown()
     {
         float count = 0;

@@ -157,6 +157,7 @@ MonoBehaviour:
   mCameraViewWidth: -11
   mCameraViewHeight: 0
   mForwardMove: 0
+  mOutOfBoundsDown: 0
   mSpawnPoint: {fileID: 899656440}
 --- !u!61 &22644050
 BoxCollider2D:
@@ -227,6 +228,7 @@ MonoBehaviour:
   mCameraViewWidth: 0
   mCameraViewHeight: 6
   mForwardMove: 0
+  mOutOfBoundsDown: 0
   mSpawnPoint: {fileID: 899656440}
 --- !u!61 &344145328
 BoxCollider2D:
@@ -280,9 +282,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2539eae2af71e0c468b4685078c34a5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cursorTexture: {fileID: 2800000, guid: 23d18aec4455f8f48a8d468a29736fc4, type: 3}
+  cursorTexture:
+  - {fileID: 2800000, guid: 23d18aec4455f8f48a8d468a29736fc4, type: 3}
   cursorMode: 0
   hotSpot: {x: 0, y: 0}
+  blockPlace: {fileID: 1224929775}
 --- !u!4 &438566147
 Transform:
   m_ObjectHideFlags: 0
@@ -1204,6 +1208,7 @@ MonoBehaviour:
   - {fileID: 2012817200}
   placedBlocks: []
   cursor: {fileID: 438566145}
+  whichBlock: 0
 --- !u!4 &1224929776
 Transform:
   m_ObjectHideFlags: 0
@@ -2212,6 +2217,7 @@ MonoBehaviour:
   mCameraViewWidth: 11
   mCameraViewHeight: 0
   mForwardMove: 0
+  mOutOfBoundsDown: 0
   mSpawnPoint: {fileID: 899656440}
 --- !u!61 &1889983379
 BoxCollider2D:
@@ -3047,6 +3053,7 @@ MonoBehaviour:
   mCameraViewWidth: 0
   mCameraViewHeight: -6
   mForwardMove: 0
+  mOutOfBoundsDown: -20
   mSpawnPoint: {fileID: 899656440}
 --- !u!61 &2112962994
 BoxCollider2D:

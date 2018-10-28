@@ -5,14 +5,17 @@ using UnityEditor;
 
 public class changeCursor : MonoBehaviour {
 
-    public Texture2D cursorTexture;
+    public List<Texture2D> cursorTexture; // list of textures the cursor can have. Should be the same as available blocks
     public CursorMode cursorMode = CursorMode.Auto;
     public Vector2 hotSpot = Vector2.zero;
 
+    public BlockPlace blockPlace;
+
     void OnMouseEnter()
     {
+        // make cursor visible and set texture appropriatley. also keeps track of cursor position in the world
         Cursor.visible = true;
-        Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
+        Cursor.SetCursor(cursorTexture[blockPlace.whichBlock], hotSpot, cursorMode);
         Vector3 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         cursorPos.z = 0.0f;
         transform.position = cursorPos;
@@ -32,6 +35,7 @@ public class changeCursor : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+        // called when mouse is in the game screen
         OnMouseEnter();
 	}
 }
