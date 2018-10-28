@@ -13,7 +13,9 @@ public class changeCursor : MonoBehaviour {
     {
         Cursor.visible = true;
         Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
-        transform.position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0.0f);
+        Vector3 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        cursorPos.z = 0.0f;
+        transform.position = cursorPos;
     }
 
     void OnMouseExit()
