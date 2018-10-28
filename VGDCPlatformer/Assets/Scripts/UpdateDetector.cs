@@ -26,18 +26,37 @@ public class UpdateDetector : MonoBehaviour {
     {
         if(other.gameObject.CompareTag("Player"))
         {
-            mSpawnPoint.position = new Vector3(mSpawnPoint.position.x + mCameraViewWidth, mSpawnPoint.position.y + mCameraViewHeight, mSpawnPoint.position.z);
-            StartCoroutine(Example());
-            if(mCameraViewWidth > 0)
+            //mSpawnPoint.position = new Vector3(mSpawnPoint.position.x + mCameraViewWidth, mSpawnPoint.position.y + mCameraViewHeight, mSpawnPoint.position.z);
+            if (mCameraViewWidth > 0)
+            {
+                StartCoroutine(LeftOrRight());
                 other.gameObject.transform.position = new Vector3(other.gameObject.transform.position.x + .3f, other.gameObject.transform.position.y, other.gameObject.transform.position.z);
-            else
+            }
+            else if(mCameraViewWidth < 0)
+            {
+                StartCoroutine(LeftOrRight());
                 other.gameObject.transform.position = new Vector3(other.gameObject.transform.position.x - .3f, other.gameObject.transform.position.y, other.gameObject.transform.position.z);
+            }
+
+            if (mCameraViewHeight > 0)
+            {
+                StartCoroutine(UpOrDown());
+                other.gameObject.transform.position = new Vector3(other.gameObject.transform.position.x, other.gameObject.transform.position.y + .3f, other.gameObject.transform.position.z);
+                
+            }
+            else if(mCameraViewHeight < 0)
+            {
+                StartCoroutine(UpOrDown());
+                other.gameObject.transform.position = new Vector3(other.gameObject.transform.position.x, other.gameObject.transform.position.y - .3f, other.gameObject.transform.position.z);
+                
+            }
+
             //transform.parent.position = new Vector3(transform.parent.position.x + mCameraViewWidth, transform.parent.position.y + mCameraViewHeight, transform.parent.position.z);
         }
         
     }
 
-    IEnumerator Example()
+    IEnumerator LeftOrRight()
     {
         float count = 0;
         while(count < 55)
@@ -46,8 +65,25 @@ public class UpdateDetector : MonoBehaviour {
                 transform.parent.position = new Vector3(transform.parent.position.x + .2f, transform.parent.position.y, transform.parent.position.z);
             else
                 transform.parent.position = new Vector3(transform.parent.position.x - .2f, transform.parent.position.y, transform.parent.position.z);
+
             count++;
             yield return new WaitForSecondsRealtime(.01f);
         }
     }
+
+    IEnumerator UpOrDown()
+    {
+        float count = 0;
+        while (count < 30)
+        {
+            if (mCameraViewHeight > 0)
+                transform.parent.position = new Vector3(transform.parent.position.x, transform.parent.position.y + .2f, transform.parent.position.z);
+            else
+                transform.parent.position = new Vector3(transform.parent.position.x, transform.parent.position.y - .2f, transform.parent.position.z);
+
+            count++;
+            yield return new WaitForSecondsRealtime(.01f);
+        }
+    }
+
 }
