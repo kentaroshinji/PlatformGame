@@ -18,19 +18,35 @@ public class BlockPlace : MonoBehaviour {
 	void Start ()
     {
         whichBlock = 0;
+        Debug.Log(blockTypes.Count);
 	}
-	
-	// Update is called once per frame
-	void Update ()
+
+    void SwitchBlocks()
+    {
+        if (Input.GetKeyDown("q") && whichBlock > 0)
+            whichBlock--;
+        
+        if (Input.GetKeyDown("e") && whichBlock < (blockTypes.Count-1))
+            whichBlock++;
+    }
+
+    void PlaceBlock()
     {
         // If left mouse button clicked
         if (Input.GetMouseButtonDown(0) && blocksRemaining[whichBlock] > 0)
         {
             // create a new block of the type currently selected at the cursors position
             GameObject newBlock = Instantiate(blockTypes[whichBlock], grid.transform);
-            newBlock.transform.position = new Vector3(cursor.transform.position.x+.5f, cursor.transform.position.y+2, 0.0f);
+            newBlock.transform.position = new Vector3(cursor.transform.position.x + .5f, cursor.transform.position.y + 2, 0.0f);
             placedBlocks.Add(newBlock);
             blocksRemaining[whichBlock]--;
         }
+    }
+	
+	// Update is called once per frame
+	void Update ()
+    {
+        PlaceBlock();
+        SwitchBlocks();
     }
 }
