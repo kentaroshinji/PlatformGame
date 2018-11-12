@@ -24,8 +24,8 @@ public class Respawn : MonoBehaviour {
         // If the player falls too far or hits the r key, destroy all created blocks and return to where the spawn point is set.
         if (transform.position.y < mFallLimit || Input.GetKeyDown("r")) // respawn if fallen too far or the r key is pressed
         {
-            Application.LoadLevel(Application.loadedLevel); // Reloads the scene, returning everything back to how it was originally
 
+            Reload();
             /**transform.position = new Vector3(mSpawnPoint.position.x, mSpawnPoint.position.y, 0.0f);
 
             mCamera.position = new Vector3(0.0f, 0.0f, mCamera.position.z);
@@ -37,4 +37,9 @@ public class Respawn : MonoBehaviour {
             }**/
         }
 	}
+
+    public void Reload()
+    {
+        Application.LoadLevel(Application.loadedLevel); // Reloads the scene, returning everything back to how it was originally
+    }
 }
