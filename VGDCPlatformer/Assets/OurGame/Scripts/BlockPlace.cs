@@ -33,13 +33,16 @@ public class BlockPlace : MonoBehaviour {
     void PlaceBlock()
     {
         // If left mouse button clicked
-        if (Input.GetMouseButtonDown(0) && blocksRemaining[whichBlock] > 0)
+        if (blockTypes.Count > 0)
         {
-            // create a new block of the type currently selected at the cursors position
-            GameObject newBlock = Instantiate(blockTypes[whichBlock], grid.transform);
-            newBlock.transform.position = new Vector3(cursor.transform.position.x + .5f, cursor.transform.position.y + 2, 0.0f);
-            placedBlocks.Add(newBlock);
-            blocksRemaining[whichBlock]--;
+            if (Input.GetMouseButtonDown(0) && blocksRemaining[whichBlock] > 0)
+            {
+                // create a new block of the type currently selected at the cursors position
+                GameObject newBlock = Instantiate(blockTypes[whichBlock], grid.transform);
+                newBlock.transform.position = new Vector3(cursor.transform.position.x + .5f, cursor.transform.position.y + 2, 0.0f);
+                placedBlocks.Add(newBlock);
+                blocksRemaining[whichBlock]--;
+            }
         }
     }
 	

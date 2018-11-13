@@ -9,6 +9,9 @@ TagManager:
   - floor
   - environment
   - checkPoint
+  - block
+  - blockPlacer
+  - cursor
   layers:
   - Default
   - TransparentFX

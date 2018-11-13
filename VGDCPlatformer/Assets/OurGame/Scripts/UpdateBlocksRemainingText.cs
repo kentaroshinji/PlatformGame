@@ -21,7 +21,7 @@ public class UpdateBlocksRemainingText : MonoBehaviour
 	void Update ()
     {
         myRectTransform.position = Input.mousePosition;
-
-        remainingBlocksText.text = blockPlace.blocksRemaining[blockPlace.whichBlock].ToString();
+        if(blockPlace.blockTypes.Count > 0)
+            remainingBlocksText.text = blockPlace.blocksRemaining[blockPlace.whichBlock].ToString();
     }
 }

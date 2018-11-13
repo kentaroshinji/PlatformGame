@@ -14,11 +14,14 @@ public class changeCursor : MonoBehaviour {
     void OnMouseEnter()
     {
         // make cursor visible and set texture appropriatley. also keeps track of cursor position in the world
-        Cursor.visible = true;
-        Cursor.SetCursor(cursorTexture[blockPlace.whichBlock], hotSpot, cursorMode);
-        Vector3 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        cursorPos.z = 0.0f;
-        transform.position = cursorPos;
+        if (blockPlace.blockTypes.Count > 0)
+        {
+            Cursor.visible = true;
+            Cursor.SetCursor(cursorTexture[blockPlace.whichBlock], hotSpot, cursorMode);
+            Vector3 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            cursorPos.z = 0.0f;
+            transform.position = cursorPos;
+        }
     }
 
     void OnMouseExit()
@@ -29,8 +32,8 @@ public class changeCursor : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
-        //cursorTexture = Texture2D.blackTexture;
-	}
+        Cursor.visible = false;
+    }
 	
 	// Update is called once per frame
 	void Update ()
