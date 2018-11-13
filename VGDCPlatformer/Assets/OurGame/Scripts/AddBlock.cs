@@ -25,11 +25,23 @@ public class AddBlock : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Player"))
         {
-            if (blockPlace.blockTypes.Count < 1)
+            
+            if (blockPlace.blockTypes.Contains(blockType))
+            {
+                Debug.Log("TRIGGERED BUT WHY ELSE IF");
+                blockPlace.blocksRemaining[blockPlace.blockTypes.IndexOf(blockType)]++;
+            }
+            else if(!blockPlace.blockTypes.Contains(blockType))
             {
                 blockPlace.blockTypes.Add(blockType);
                 blockPlace.blocksRemaining.Add(1);
             }
+            else if (blockPlace.blockTypes.Count < 1)
+            {
+                blockPlace.blockTypes.Add(blockType);
+                blockPlace.blocksRemaining.Add(1);
+            }
+
 
             Destroy(this.gameObject);
         }
