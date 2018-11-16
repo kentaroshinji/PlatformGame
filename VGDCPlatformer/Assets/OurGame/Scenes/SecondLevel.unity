@@ -1070,7 +1070,7 @@ GameObject:
   - component: {fileID: 852767876}
   m_Layer: 8
   m_Name: SecondFloor
-  m_TagString: Untagged
+  m_TagString: environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1693,7 +1693,7 @@ GameObject:
   - component: {fileID: 1743279655}
   m_Layer: 8
   m_Name: ThirdFloor
-  m_TagString: Untagged
+  m_TagString: environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

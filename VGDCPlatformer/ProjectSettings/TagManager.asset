@@ -12,6 +12,7 @@ TagManager:
   - block
   - blockPlacer
   - cursor
+  - enemy
   layers:
   - Default
   - TransparentFX

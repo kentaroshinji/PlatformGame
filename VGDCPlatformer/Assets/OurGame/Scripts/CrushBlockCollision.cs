@@ -19,9 +19,9 @@ public class CrushBlockCollision : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "environment")
+        if (collision.gameObject.tag == "enemy")
         {
-            Destroy(gameObject);
+            Destroy(collision.gameObject);
         }
     }
 }
