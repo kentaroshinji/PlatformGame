@@ -23,6 +23,10 @@ public class CrushBlockCollision : MonoBehaviour
         {
             Destroy(collision.gameObject);
         }
+        else if (collision.gameObject.tag == "player")
+        {
+
+        }
         else
         {
             Destroy(gameObject);

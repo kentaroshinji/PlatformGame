@@ -5845,6 +5845,18 @@ Prefab:
       propertyPath: m_Name
       value: SnailEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 1381516546400444, guid: b7a03ca40c97d824cb3f74a4fabb3299, type: 2}
+      propertyPath: m_TagString
+      value: enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 1741745408307974, guid: b7a03ca40c97d824cb3f74a4fabb3299, type: 2}
+      propertyPath: m_TagString
+      value: enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852371671971038, guid: b7a03ca40c97d824cb3f74a4fabb3299, type: 2}
+      propertyPath: m_TagString
+      value: enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7a03ca40c97d824cb3f74a4fabb3299, type: 2}
   m_IsPrefabAsset: 0
@@ -6177,7 +6189,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4234226418625514, guid: 5ea0b272e041a81449dcceea56257507, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -6.87
+      value: -8.65
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ea0b272e041a81449dcceea56257507, type: 2}
@@ -6304,6 +6316,10 @@ Prefab:
       propertyPath: respawn
       value: 
       objectReference: {fileID: 1541971068}
+    - target: {fileID: 1294991939959372, guid: 34dc9a9a005d5004cb8ee652d0817f5d, type: 2}
+      propertyPath: m_TagString
+      value: enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34dc9a9a005d5004cb8ee652d0817f5d, type: 2}
   m_IsPrefabAsset: 0
