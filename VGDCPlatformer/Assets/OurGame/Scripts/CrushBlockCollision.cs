@@ -23,5 +23,9 @@ public class CrushBlockCollision : MonoBehaviour
         {
             Destroy(collision.gameObject);
         }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 }
