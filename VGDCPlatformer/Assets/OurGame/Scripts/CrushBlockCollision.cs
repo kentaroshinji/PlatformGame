@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CrushBlockCollision : MonoBehaviour
 {
+    public Respawn respawn;
 
     // Use this for initialization
     void Start()
@@ -23,11 +24,11 @@ public class CrushBlockCollision : MonoBehaviour
         {
             Destroy(collision.gameObject);
         }
-        else if (collision.gameObject.tag == "player")
+        else if (collision.gameObject.tag == "Player")
         {
-
+            respawn.Reload();
         }
-        else
+        else if (collision.gameObject.tag == "environment")
         {
             Destroy(gameObject);
         }

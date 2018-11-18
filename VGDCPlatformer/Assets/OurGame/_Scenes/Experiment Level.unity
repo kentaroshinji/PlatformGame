@@ -371,11 +371,11 @@ Prefab:
       objectReference: {fileID: 994061928}
     - target: {fileID: 1475074084749914, guid: 5ea0b272e041a81449dcceea56257507, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4234226418625514, guid: 5ea0b272e041a81449dcceea56257507, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -6.87
+      value: -8.57
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ea0b272e041a81449dcceea56257507, type: 2}
@@ -441,7 +441,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4204745781155966, guid: ffbc537445948d2429e1b6f653cbc79c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -13.2
+      value: -17.74
       objectReference: {fileID: 0}
     - target: {fileID: 4204745781155966, guid: ffbc537445948d2429e1b6f653cbc79c, type: 2}
       propertyPath: m_LocalPosition.y
@@ -471,6 +471,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114630376165307076, guid: ffbc537445948d2429e1b6f653cbc79c,
+        type: 2}
+      propertyPath: respawn
+      value: 
+      objectReference: {fileID: 2018918498}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffbc537445948d2429e1b6f653cbc79c, type: 2}
   m_IsPrefabAsset: 0
@@ -2018,6 +2023,18 @@ Prefab:
     - target: {fileID: 1901682462121048, guid: b7a03ca40c97d824cb3f74a4fabb3299, type: 2}
       propertyPath: m_Name
       value: SnailEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 1741745408307974, guid: b7a03ca40c97d824cb3f74a4fabb3299, type: 2}
+      propertyPath: m_TagString
+      value: enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852371671971038, guid: b7a03ca40c97d824cb3f74a4fabb3299, type: 2}
+      propertyPath: m_TagString
+      value: enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 1381516546400444, guid: b7a03ca40c97d824cb3f74a4fabb3299, type: 2}
+      propertyPath: m_TagString
+      value: enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7a03ca40c97d824cb3f74a4fabb3299, type: 2}
