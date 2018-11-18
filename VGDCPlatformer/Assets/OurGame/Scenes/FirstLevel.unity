@@ -524,6 +524,16 @@ Prefab:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 61256304577260560, guid: 846d9113eb4b1684db2c3c1226371228,
+        type: 2}
+      propertyPath: m_UsedByEffector
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61256304577260560, guid: 846d9113eb4b1684db2c3c1226371228,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 846d9113eb4b1684db2c3c1226371228, type: 2}
   m_IsPrefabAsset: 0
@@ -728,6 +738,14 @@ Prefab:
       propertyPath: blockType
       value: 
       objectReference: {fileID: 2012817200}
+    - target: {fileID: 1475074084749914, guid: 5ea0b272e041a81449dcceea56257507, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4234226418625514, guid: 5ea0b272e041a81449dcceea56257507, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -6.87
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ea0b272e041a81449dcceea56257507, type: 2}
   m_IsPrefabAsset: 0
