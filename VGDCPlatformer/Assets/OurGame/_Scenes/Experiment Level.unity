@@ -2281,6 +2281,53 @@ Transform:
   m_Father: {fileID: 795304557}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1121033125
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4422881333915956, guid: d2efd42022493314e9a64d652c21a2fe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4422881333915956, guid: d2efd42022493314e9a64d652c21a2fe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4422881333915956, guid: d2efd42022493314e9a64d652c21a2fe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4422881333915956, guid: d2efd42022493314e9a64d652c21a2fe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4422881333915956, guid: d2efd42022493314e9a64d652c21a2fe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4422881333915956, guid: d2efd42022493314e9a64d652c21a2fe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4422881333915956, guid: d2efd42022493314e9a64d652c21a2fe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4422881333915956, guid: d2efd42022493314e9a64d652c21a2fe, type: 2}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 114081948781094012, guid: d2efd42022493314e9a64d652c21a2fe,
+        type: 2}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1926062028}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d2efd42022493314e9a64d652c21a2fe, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &1166810792
 GameObject:
   m_ObjectHideFlags: 0
@@ -3586,6 +3633,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!4 &1926062028 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4173466533696740, guid: 8b33039416cc996439e3e4a3015b22ac,
+    type: 2}
+  m_PrefabInternal: {fileID: 2018918497}
 --- !u!1001 &1956366975
 Prefab:
   m_ObjectHideFlags: 0
