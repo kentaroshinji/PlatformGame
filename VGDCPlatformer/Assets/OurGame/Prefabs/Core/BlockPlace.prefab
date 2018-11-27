@@ -53,9 +53,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grid: {fileID: 0}
   whichBlock: 0
-  blockTypes:
-  - {fileID: 1063289224698016, guid: 2a71c6f13a3515748993366de6b5d81b, type: 2}
-  - {fileID: 0}
+  blockTypes: []
   placedBlocks: []
-  blocksRemaining: 4200000004000000
-  cursor: {fileID: 1893012358159128, guid: 3a2b218e4c0fa3a4f9cd0eba0edcd61b, type: 2}
+  blocksRemaining: 
+  cursor: {fileID: 0}
