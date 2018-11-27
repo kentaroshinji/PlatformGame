@@ -136,7 +136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TriggerZone: {fileID: 1294991939959372}
   a: {fileID: 0}
-  respawn: {fileID: 0}
+  respawn: {fileID: 114671417039390428, guid: 609be1d65689ff042becd44e05b9689c, type: 2}
 --- !u!212 &212223868671363266
 SpriteRenderer:
   m_ObjectHideFlags: 1
