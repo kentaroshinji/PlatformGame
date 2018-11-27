@@ -13,6 +13,8 @@ TagManager:
   - blockPlacer
   - cursor
   - enemy
+  - Boss
+  - CrushBlock
   layers:
   - Default
   - TransparentFX
