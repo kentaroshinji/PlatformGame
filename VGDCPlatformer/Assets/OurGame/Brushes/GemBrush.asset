@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Name: GemBrush
   m_EditorClassIdentifier: 
   m_Prefabs:
-  - {fileID: 1294991939959372, guid: 34dc9a9a005d5004cb8ee652d0817f5d, type: 2}
+  - {fileID: 1364548578870886, guid: ae6abd7c311ef9f4c9716aea5a1e3704, type: 2}
   m_PerlinScale: 0.4
   m_Z: 1
