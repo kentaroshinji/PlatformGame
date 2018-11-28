@@ -11,7 +11,7 @@ public class BlockPlace : MonoBehaviour {
     public List<GameObject> placedBlocks; // list of created blocks
     public List<int> blocksRemaining; // List of how many blocks of each type the player can use
 
-    public GameObject cursor; // the cursor where blocks can be placed
+    public changeCursor cursor; // the cursor where blocks can be placed
     
 
 	// Use this for initialization
@@ -33,7 +33,7 @@ public class BlockPlace : MonoBehaviour {
     void PlaceBlock()
     {
         // If left mouse button clicked
-        if (blockTypes.Count > 0)
+        if (blockTypes.Count > 0 && cursor.groundchecker.IsGrounded())
         {
             if (Input.GetMouseButtonDown(0) && blocksRemaining[whichBlock] > 0)
             {

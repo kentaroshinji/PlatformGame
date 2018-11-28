@@ -10,11 +10,12 @@ public class changeCursor : MonoBehaviour {
     public Vector2 hotSpot = Vector2.zero;
 
     public BlockPlace blockPlace;
+    public CharacterController2D groundchecker;
 
     void OnMouseEnter()
     {
         // make cursor visible and set texture appropriatley. also keeps track of cursor position in the world
-        if (blockPlace.blockTypes.Count > 0)
+        if (blockPlace.blockTypes.Count > 0 && groundchecker.IsGrounded())
         {
             Cursor.visible = true;
             Cursor.SetCursor(cursorTexture[blockPlace.whichBlock], hotSpot, cursorMode);

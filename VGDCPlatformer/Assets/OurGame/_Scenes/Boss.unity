@@ -27106,19 +27106,9 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114081948781094012, guid: d2efd42022493314e9a64d652c21a2fe,
         type: 2}
-      propertyPath: chaseRange
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 114081948781094012, guid: d2efd42022493314e9a64d652c21a2fe,
-        type: 2}
       propertyPath: target
       value: 
       objectReference: {fileID: 1995155791}
-    - target: {fileID: 114081948781094012, guid: d2efd42022493314e9a64d652c21a2fe,
-        type: 2}
-      propertyPath: speed
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2efd42022493314e9a64d652c21a2fe, type: 2}
   m_IsPrefabAsset: 0
