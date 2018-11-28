@@ -4,30 +4,46 @@ using UnityEngine;
 
 public class Boss : MonoBehaviour {
     public Respawn respawn;
-    public Transform[] patrolPoints;
-    public float speed;
-    Transform currentPatrolPoint;
-    int currentPatrolIntex;
+    public float slowSpeed;
+    public int slowingTime;
+    private int count = 0;
 
-    public Transform target;
-    public float chaseRange;
+    [SerializeField]
+    private Transform[] waypoints;
 
+    [SerializeField]
+    public float moveSpeed;
+
+    private int waypointIndex = 0;
     // Use this for initialization
     void Start()
     {
-        currentPatrolIntex = 0;
-        currentPatrolPoint = patrolPoints[currentPatrolIntex];
+
+        transform.position = waypoints[waypointIndex].transform.position;
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        float distanceToTarget = Vector3.Distance(transform.position, target.position);
-        if (distanceToTarget < chaseRange)
+        if (count <= 0)
         {
+            StopCoroutine("LoseTime");
+            Move();
+        }
+        else
+        {
+            StartCoroutine("LoseTime");
+            SlowMove();
+        }
+    }
 
-            transform.Translate(Vector3.down * Time.deltaTime * speed);
+    IEnumerator LoseTime()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(1);
+            count--;
         }
     }
 
@@ -43,11 +59,44 @@ public class Boss : MonoBehaviour {
         }
         else if (collision.gameObject.tag == "environment")
         {
-           // Destroy(collision.gameObject);
+            // Destroy(collision.gameObject);
         }
         else if (collision.gameObject.tag == "CrushBlock")
         {
-            speed = 1;
+            transform.Translate(Vector3.down * Time.deltaTime * slowSpeed);
+            count = slowingTime;
+        }
+    }
+
+    private void Move()
+    {
+        if(waypointIndex <= waypoints.Length - 1)
+        {
+            Vector3 targetDir = waypoints[waypointIndex].transform.position - transform.position;
+            float angle = Mathf.Atan2(targetDir.y, targetDir.x) * Mathf.Rad2Deg - 90f;
+            Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, q, 180);
+            transform.position = Vector2.MoveTowards(transform.position, waypoints[waypointIndex].transform.position, moveSpeed * Time.deltaTime);
+            if(transform.position == waypoints[waypointIndex].transform.position)
+            {
+                waypointIndex += 1;
+            }
+        }
+    }
+
+    private void SlowMove()
+    {
+        if (waypointIndex <= waypoints.Length - 1)
+        {
+            Vector3 targetDir = waypoints[waypointIndex].transform.position - transform.position;
+            float angle = Mathf.Atan2(targetDir.y, targetDir.x) * Mathf.Rad2Deg - 90f;
+            Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, q, 180);
+            transform.position = Vector2.MoveTowards(transform.position, waypoints[waypointIndex].transform.position, slowSpeed * Time.deltaTime);
+            if (transform.position == waypoints[waypointIndex].transform.position)
+            {
+                waypointIndex += 1;
+            }
         }
     }
 }
