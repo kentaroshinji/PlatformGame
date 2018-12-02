@@ -191,11 +191,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &62206674 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4173466533696740, guid: 8b33039416cc996439e3e4a3015b22ac,
-    type: 2}
-  m_PrefabInternal: {fileID: 2018918497}
 --- !u!1 &93507639
 GameObject:
   m_ObjectHideFlags: 0
@@ -2574,17 +2569,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1294991939959372, guid: 34dc9a9a005d5004cb8ee652d0817f5d,
     type: 2}
   m_PrefabInternal: {fileID: 1896050052}
---- !u!114 &1235800799
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1235800797}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dd7e628f1b0b9c4ca54afcb27467311, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1235800804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2597,10 +2581,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawn: {fileID: 0}
-  patrolPoints: []
-  speed: 5
-  target: {fileID: 62206674}
-  chaseRange: 100000
+  slowSpeed: 0
+  slowingTime: 0
+  waypoints: []
+  moveSpeed: 0
 --- !u!20 &1248406467 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 20679840385376540, guid: 8b33039416cc996439e3e4a3015b22ac,
