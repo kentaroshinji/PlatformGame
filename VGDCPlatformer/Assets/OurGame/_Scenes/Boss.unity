@@ -6309,6 +6309,10 @@ Prefab:
       propertyPath: m_TagString
       value: CrushBlock
       objectReference: {fileID: 0}
+    - target: {fileID: 1762014169737418, guid: 846d9113eb4b1684db2c3c1226371228, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 846d9113eb4b1684db2c3c1226371228, type: 2}
   m_IsPrefabAsset: 0
@@ -12850,6 +12854,16 @@ Prefab:
     - target: {fileID: 4960810677040920, guid: 9740848ff9621334395f12c04c95b3f0, type: 2}
       propertyPath: m_RootOrder
       value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 114680463213273232, guid: 9740848ff9621334395f12c04c95b3f0,
+        type: 2}
+      propertyPath: sceneName
+      value: Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 114680463213273232, guid: 9740848ff9621334395f12c04c95b3f0,
+        type: 2}
+      propertyPath: level
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9740848ff9621334395f12c04c95b3f0, type: 2}
@@ -27943,11 +27957,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4206546785073610, guid: 609be1d65689ff042becd44e05b9689c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 1.7
+      value: 1.31
       objectReference: {fileID: 0}
     - target: {fileID: 4206546785073610, guid: 609be1d65689ff042becd44e05b9689c, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.5
+      value: -1.82
       objectReference: {fileID: 0}
     - target: {fileID: 4206546785073610, guid: 609be1d65689ff042becd44e05b9689c, type: 2}
       propertyPath: m_LocalPosition.z
