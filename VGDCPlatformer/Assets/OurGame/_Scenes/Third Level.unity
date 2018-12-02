@@ -59318,7 +59318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5287847b7c59a0746863b8e372012352, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLeft: 10
+  timeLeft: 60
   countdownText: {fileID: 1728472144}
   respawn: {fileID: 0}
 --- !u!114 &1728472144
@@ -59353,7 +59353,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Time Left = 10
+  m_Text: Time Left = 60
 --- !u!222 &1728472145
 CanvasRenderer:
   m_ObjectHideFlags: 0
