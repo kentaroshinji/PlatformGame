@@ -12,6 +12,11 @@ public class BlockPlace : MonoBehaviour {
     public List<int> blocksRemaining; // List of how many blocks of each type the player can use
 
     public changeCursor cursor; // the cursor where blocks can be placed
+
+    private const float XPLATOFFSET = -.25f;
+    private const float YPLATOFFSET = 2.0f;
+    private const float XCRUSHOFFSET = .3f;
+    private const float YCRUSHOFFSET = 0.0f;
     
 
 	// Use this for initialization
@@ -39,7 +44,12 @@ public class BlockPlace : MonoBehaviour {
             {
                 // create a new block of the type currently selected at the cursors position
                 GameObject newBlock = Instantiate(blockTypes[whichBlock], grid.transform);
-                newBlock.transform.position = new Vector3(cursor.transform.position.x + .5f, cursor.transform.position.y + 2, 0.0f);
+                // shouldn't actaully use the cursor position exactly, because it will not be centered. Give Offset depending on block used
+                if (whichBlock == 0) // Platform block
+                    newBlock.transform.position = new Vector3(cursor.transform.position.x + XPLATOFFSET, cursor.transform.position.y + YPLATOFFSET, 0.0f);
+                else // Crush block (really bad design tbh)
+                    newBlock.transform.position = new Vector3(cursor.transform.position.x + XCRUSHOFFSET, cursor.transform.position.y + YCRUSHOFFSET, 0.0f);
+
                 placedBlocks.Add(newBlock);
                 blocksRemaining[whichBlock]--;
             }
