@@ -5,13 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class TriggerP : MonoBehaviour {
     public string sceneName;
-    public int level = 1;
+    public int level;
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
-        if (collision.gameObject.CompareTag("Player") && level == 1)
+        if (collision.gameObject.CompareTag("Player"))
         {
-            level = 2;
             SceneManager.LoadScene(sceneName);
             Destroy(gameObject);
         }
