@@ -7,9 +7,10 @@ public class Timer : MonoBehaviour {
 
     public int timeLeft = 5;
     public Text countdownText;
+    public Respawn respawn;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         StartCoroutine("LoseTime");
 	}
 
@@ -19,7 +20,7 @@ public class Timer : MonoBehaviour {
         if (timeLeft <= 0)
         {
             StopCoroutine("LoseTime");
-            countdownText.text = "Times Up!";
+            respawn.Reload();
         }
     }
 
