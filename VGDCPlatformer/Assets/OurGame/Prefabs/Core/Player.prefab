@@ -298,6 +298,7 @@ MonoBehaviour:
   mCamera: {fileID: 0}
   mFallLimit: -100
   blockPlace: {fileID: 0}
+  mover: {fileID: 114165802011608610}
 --- !u!114 &114788979460899232
 MonoBehaviour:
   m_ObjectHideFlags: 1

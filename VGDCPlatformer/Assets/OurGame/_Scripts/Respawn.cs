@@ -12,6 +12,8 @@ public class Respawn : MonoBehaviour {
 
     public BlockPlace blockPlace; // For destroying blocks created
 
+    public PlayerMove mover;
+
     AudioSource audioData;
 
     // Use this for initialization
@@ -43,6 +45,9 @@ public class Respawn : MonoBehaviour {
 
     IEnumerator Dead()
     {
+        mover.runSpeed = 0.0f;
+        mover.controller.m_JumpForce = 0.0f;
+        mover.controller.m_FallGravity = 0.0f;
         GameObject[] music = GameObject.FindGameObjectsWithTag("Music");
         foreach (GameObject mus in music)
         {
@@ -51,7 +56,7 @@ public class Respawn : MonoBehaviour {
 
         audioData.PlayOneShot(audioData.clip);
 
-        yield return new WaitForSeconds(audioData.clip.length);
+        yield return new WaitForSeconds(1);
 
         Application.LoadLevel(Application.loadedLevel); // Reloads the scene, returning everything back to how it was originally
     }
