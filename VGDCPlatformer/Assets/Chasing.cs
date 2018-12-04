@@ -8,6 +8,7 @@ public class Chasing : MonoBehaviour {
     public float speed;
     Transform currentPatrolPoint;
     int currentPatrolIntex;
+    public Respawn respawn;
 
     public Transform target;
     public float chaseRange;
@@ -31,5 +32,14 @@ public class Chasing : MonoBehaviour {
             transform.Translate(Vector3.up * Time.deltaTime * speed);
         }
     }
-  
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            Debug.Log("Hit player");
+            respawn.Reload();
+        }
+    }
+
 }
