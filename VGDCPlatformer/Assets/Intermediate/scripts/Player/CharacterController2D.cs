@@ -7,7 +7,7 @@ public class CharacterController2D : MonoBehaviour {
     [SerializeField] private float m_JumpForce = 800f;
     [SerializeField] public int m_AirJumps = 0;
     [SerializeField] private float m_FallGravity = 4f;
-    [Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;
+    [Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .5f;
     [SerializeField] private LayerMask m_GroundLayer;
     [SerializeField] private Transform m_GroundCheck;
     [SerializeField] private Transform m_HorizontalCheck;
@@ -22,11 +22,11 @@ public class CharacterController2D : MonoBehaviour {
     public bool m_Immune = false;
     private int m_AirJumpsLeft;
     private Vector3 m_Velocity = Vector3.zero;
-
+    private Animator animator;
 
     void Awake()
     {
-
+        animator = GetComponent<Animator>();
         m_RigidBody2D = GetComponent<Rigidbody2D>();
     }
 
@@ -43,13 +43,14 @@ public class CharacterController2D : MonoBehaviour {
     public void Move(float move, bool jump)
     {
 
+        animator.SetBool("grounded", m_Grounded);
 
         if (m_Grounded || m_AirControl)
         {
             Vector3 targetVelocity = new Vector2(move * 10f, m_RigidBody2D.velocity.y);
 
-            m_RigidBody2D.velocity = Vector3.SmoothDamp(m_RigidBody2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
-
+            m_RigidBody2D.velocity = Vector3.SmoothDamp(m_RigidBody2D.velocity, targetVelocity,ref m_Velocity, m_MovementSmoothing);
+            
             if (move > 0 && !m_FacingRight)
             {
                 Flip();

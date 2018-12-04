@@ -8,20 +8,23 @@ public class PlayerMove : MonoBehaviour {
     float horizontalMove = 0f;
     bool jump = false;
     public CharacterController2D controller;
+    private Animator animator;
 
-    void Start()
+    void Awake()
     {
-
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+        animator.SetFloat("horizontalMove", Mathf.Abs(horizontalMove));
         if (Input.GetButtonDown("Jump"))
         {
             jump = true;
         }
+       
     }
 
     private void FixedUpdate()
