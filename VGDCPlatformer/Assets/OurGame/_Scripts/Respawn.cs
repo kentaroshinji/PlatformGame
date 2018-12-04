@@ -12,9 +12,12 @@ public class Respawn : MonoBehaviour {
 
     public BlockPlace blockPlace; // For destroying blocks created
 
+    AudioSource audioData;
+
     // Use this for initialization
     void Start()
     {
+        audioData = GetComponent<AudioSource>();
         mSpawnPoint.position = new Vector3(transform.position.x, transform.position.y, 0.0f);
     }
 
@@ -38,8 +41,23 @@ public class Respawn : MonoBehaviour {
         }
 	}
 
+    IEnumerator Dead()
+    {
+        GameObject[] music = GameObject.FindGameObjectsWithTag("Music");
+        foreach (GameObject mus in music)
+        {
+            mus.GetComponent<AudioSource>().Stop();
+        }
+
+        audioData.PlayOneShot(audioData.clip);
+
+        yield return new WaitForSeconds(audioData.clip.length);
+
+        Application.LoadLevel(Application.loadedLevel); // Reloads the scene, returning everything back to how it was originally
+    }
+
     public void Reload()
     {
-        Application.LoadLevel(Application.loadedLevel); // Reloads the scene, returning everything back to how it was originally
+        StartCoroutine(Dead());
     }
 }

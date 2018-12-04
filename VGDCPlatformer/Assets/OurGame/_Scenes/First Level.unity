@@ -122,7 +122,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4018327326176214, guid: debc8526b90828a4fab071d107ac3780, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 41.5
+      value: 36.96
       objectReference: {fileID: 0}
     - target: {fileID: 4018327326176214, guid: debc8526b90828a4fab071d107ac3780, type: 2}
       propertyPath: m_LocalPosition.y
@@ -317,7 +317,7 @@ GameObject:
   - component: {fileID: 594868333}
   m_Layer: 0
   m_Name: Level1R
-  m_TagString: Untagged
+  m_TagString: Music
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -822,7 +822,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4960810677040920, guid: 9740848ff9621334395f12c04c95b3f0, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 46.91
+      value: 42.37
       objectReference: {fileID: 0}
     - target: {fileID: 4960810677040920, guid: 9740848ff9621334395f12c04c95b3f0, type: 2}
       propertyPath: m_LocalPosition.y
@@ -969,7 +969,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4913343640393102, guid: da18382a174e34e42ba8740f46b916e3, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 44.75
+      value: 40.21
       objectReference: {fileID: 0}
     - target: {fileID: 4913343640393102, guid: da18382a174e34e42ba8740f46b916e3, type: 2}
       propertyPath: m_LocalPosition.y
