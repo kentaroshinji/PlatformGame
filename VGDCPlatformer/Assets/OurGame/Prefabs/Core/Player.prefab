@@ -142,7 +142,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.7241379, y: 1.2758621}
+    oldSize: {x: 1.3513514, y: 1}
     newSize: {x: 1.07, y: 0.97}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -352,6 +352,7 @@ MonoBehaviour:
   mCamera: {fileID: 0}
   mFallLimit: -100
   blockPlace: {fileID: 0}
+  mover: {fileID: 114165802011608610}
 --- !u!114 &114788979460899232
 MonoBehaviour:
   m_ObjectHideFlags: 1
