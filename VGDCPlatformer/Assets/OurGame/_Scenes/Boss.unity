@@ -5006,55 +5006,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 4676408434849430, guid: 846d9113eb4b1684db2c3c1226371228, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -4.56
-      objectReference: {fileID: 0}
-    - target: {fileID: 4895592120153572, guid: 846d9113eb4b1684db2c3c1226371228, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0.99
-      objectReference: {fileID: 0}
-    - target: {fileID: 1762014169737418, guid: 846d9113eb4b1684db2c3c1226371228, type: 2}
-      propertyPath: m_Name
-      value: PlatformBlockOld
-      objectReference: {fileID: 0}
-    - target: {fileID: 114054503865998744, guid: 846d9113eb4b1684db2c3c1226371228,
-        type: 2}
-      propertyPath: respawn
-      value: 
-      objectReference: {fileID: 1995155783}
-    - target: {fileID: 1535489947127156, guid: 846d9113eb4b1684db2c3c1226371228, type: 2}
-      propertyPath: m_TagString
-      value: CrushBlock
-      objectReference: {fileID: 0}
-    - target: {fileID: 1762014169737418, guid: 846d9113eb4b1684db2c3c1226371228, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2569400267890979478, guid: 846d9113eb4b1684db2c3c1226371228,
-        type: 2}
-      propertyPath: m_CellSize.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2569400267890979478, guid: 846d9113eb4b1684db2c3c1226371228,
-        type: 2}
-      propertyPath: m_CellSize.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 212639859329093656, guid: 846d9113eb4b1684db2c3c1226371228,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 2e0f4ceb98f92b247b971b068c257437,
-        type: 3}
-    - target: {fileID: 4661281094271086, guid: 846d9113eb4b1684db2c3c1226371228, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0.58
-      objectReference: {fileID: 0}
-    - target: {fileID: 4661281094271086, guid: 846d9113eb4b1684db2c3c1226371228, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 846d9113eb4b1684db2c3c1226371228, type: 2}
   m_IsPrefabAsset: 0
