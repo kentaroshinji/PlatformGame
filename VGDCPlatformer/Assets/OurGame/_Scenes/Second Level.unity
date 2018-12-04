@@ -17007,6 +17007,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blockPlace: {fileID: 141797654}
   blockType: {fileID: 1898506921}
+  numBlocks: 0
 --- !u!61 &266030729
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17206,6 +17207,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blockPlace: {fileID: 141797654}
   blockType: {fileID: 1898506921}
+  numBlocks: 0
 --- !u!61 &324771894
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18214,6 +18216,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blockPlace: {fileID: 141797654}
   blockType: {fileID: 1898506921}
+  numBlocks: 0
 --- !u!61 &520024267
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24875,6 +24878,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blockPlace: {fileID: 141797654}
   blockType: {fileID: 1898506921}
+  numBlocks: 0
 --- !u!61 &556747860
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25451,6 +25455,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blockPlace: {fileID: 141797654}
   blockType: {fileID: 1898506921}
+  numBlocks: 0
 --- !u!61 &706373869
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26062,6 +26067,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blockPlace: {fileID: 0}
   blockType: {fileID: 0}
+  numBlocks: 0
 --- !u!61 &857864763
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26186,6 +26192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blockPlace: {fileID: 141797654}
   blockType: {fileID: 1898506921}
+  numBlocks: 0
 --- !u!61 &885001255
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -43639,6 +43646,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blockPlace: {fileID: 141797654}
   blockType: {fileID: 1898506921}
+  numBlocks: 0
 --- !u!61 &1262230497
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -43717,6 +43725,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blockPlace: {fileID: 141797654}
   blockType: {fileID: 1898506921}
+  numBlocks: 0
 --- !u!61 &1277593836
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -43854,6 +43863,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blockPlace: {fileID: 141797654}
   blockType: {fileID: 1898506921}
+  numBlocks: 0
 --- !u!61 &1323951392
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -44055,6 +44065,11 @@ Prefab:
       propertyPath: cursor
       value: 
       objectReference: {fileID: 373641493}
+    - target: {fileID: 82839327915727600, guid: f7a37bc6a48b6d64b89543ecee10b30f,
+        type: 2}
+      propertyPath: Priority
+      value: 39
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7a37bc6a48b6d64b89543ecee10b30f, type: 2}
   m_IsPrefabAsset: 0
@@ -44105,6 +44120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blockPlace: {fileID: 141797654}
   blockType: {fileID: 1898506921}
+  numBlocks: 0
 --- !u!61 &1389123387
 BoxCollider2D:
   m_ObjectHideFlags: 0

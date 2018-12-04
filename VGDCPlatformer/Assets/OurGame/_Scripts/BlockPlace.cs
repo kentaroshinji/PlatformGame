@@ -17,11 +17,13 @@ public class BlockPlace : MonoBehaviour {
     private const float YPLATOFFSET = 2.0f;
     private const float XCRUSHOFFSET = 4.3f;
     private const float YCRUSHOFFSET = 1.5f;
-    
+    private AudioSource audioData;
 
-	// Use this for initialization
-	void Start ()
+
+    // Use this for initialization
+    void Start ()
     {
+        audioData = GetComponent<AudioSource>();
         whichBlock = 0;
         Debug.Log(blockTypes.Count);
 	}
@@ -52,8 +54,9 @@ public class BlockPlace : MonoBehaviour {
                     newBlock.transform.position = new Vector3(cursor.transform.position.x + XCRUSHOFFSET, cursor.transform.position.y + YCRUSHOFFSET, 0.0f);
                     Debug.Log(newBlock.transform.position);
                 }
-                    
-                    
+
+
+                audioData.PlayOneShot(audioData.clip);
 
                 placedBlocks.Add(newBlock);
                 blocksRemaining[whichBlock]--;
