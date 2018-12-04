@@ -15,8 +15,8 @@ public class BlockPlace : MonoBehaviour {
 
     private const float XPLATOFFSET = -.25f;
     private const float YPLATOFFSET = 2.0f;
-    private const float XCRUSHOFFSET = .3f;
-    private const float YCRUSHOFFSET = 0.0f;
+    private const float XCRUSHOFFSET = 4.3f;
+    private const float YCRUSHOFFSET = 1.5f;
     
 
 	// Use this for initialization
@@ -48,7 +48,12 @@ public class BlockPlace : MonoBehaviour {
                 if (whichBlock == 0) // Platform block
                     newBlock.transform.position = new Vector3(cursor.transform.position.x + XPLATOFFSET, cursor.transform.position.y + YPLATOFFSET, 0.0f);
                 else // Crush block (really bad design tbh)
+                {
                     newBlock.transform.position = new Vector3(cursor.transform.position.x + XCRUSHOFFSET, cursor.transform.position.y + YCRUSHOFFSET, 0.0f);
+                    Debug.Log(newBlock.transform.position);
+                }
+                    
+                    
 
                 placedBlocks.Add(newBlock);
                 blocksRemaining[whichBlock]--;
