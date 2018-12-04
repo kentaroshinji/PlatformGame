@@ -2630,7 +2630,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 'A - Move to right
 
-    D - Move to Left
+    D - Move to left
 
     Space - Jump
 
